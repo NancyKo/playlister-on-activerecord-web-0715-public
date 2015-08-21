@@ -31,3 +31,8 @@ def drop_db
     DB.execute("DROP TABLE #{table}")
   end
 end
+
+def seed_db
+  seed_file = File.join('db/seeds.rb')
+  load(seed_file) if File.exist?(seed_file)
+end

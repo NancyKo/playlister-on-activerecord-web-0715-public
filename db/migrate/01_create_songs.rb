@@ -1,2 +1,8 @@
 class CreateSongs < ActiveRecord::Migration
+	def change 
+		create_table :songs do |t|
+			t.string :name
+		end
+		add_column :songs, :genre_id, :integer
+	end
 end
