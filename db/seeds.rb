@@ -15,7 +15,7 @@ end
 	artists = Artist.all.sort
 	Song.create({
 		name: Faker::Book.title,
-		artist_id: artists[rand(1..5)].id,
-		genre_id: genres[rand(1..10)].id
+		genre_id: genres[rand(1..10)].id,
+		artist_id: artists[rand(1..5)].id
 	})
 end
